@@ -57,6 +57,23 @@ async function initDynamicSliders() {
 function init() {
 	initMobileNav();
 	initDynamicSliders();
+	initPasswordVisibilityToggle();
+}
+
+function initPasswordVisibilityToggle() {
+	const toggleButton = qs('#toggle-password-button');
+	if (!toggleButton) return;
+
+	const passwordInput = qs('#password-input');
+	if (!passwordInput) return;
+
+	const icon = toggleButton.querySelector('span');
+
+	on(toggleButton, 'click', () => {
+		const isPassword = passwordInput.type === 'password';
+		passwordInput.type = isPassword ? 'text' : 'password';
+		if (icon) icon.textContent = isPassword ? 'visibility_off' : 'visibility';
+	});
 }
 
 if (document.readyState === 'loading') {
