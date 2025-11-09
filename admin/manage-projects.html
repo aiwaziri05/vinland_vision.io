@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Vinland Vision - Manage Projects</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="../scripts/dashboard-theme.js"></script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+</head>
+<body class="font-display bg-slate-100 dark:bg-background-dark text-slate-800 dark:text-slate-100">
+<div class="relative flex min-h-screen w-full">
+<aside class="fixed flex h-full w-64 flex-col bg-slate-900 text-slate-300 p-4 font-medium">
+<div class="flex flex-col gap-10">
+<div class="flex items-center gap-3 px-2">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="Company logo abstract shape" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCjfK_UjFeNRYgzbIdzMAUaRthb0AqEWnJmolj3Ipj5E7gjFMmbMA8wIKo1ocfgoQp22DKhkP8tD4yH4UT4bJsc_JY7za5ilGNvscdAKv_MSIKa0MxPDheJqf5KLkIgAnvKvoKSUPosoaf0Y_jsFAS1wPwAiSB5nkjYCKrA-xkIRRKBjc1SjxjWSYgz6ltmK60S7O7DF7qzRgpHPwFII5S-J5tABWlRO70LL1PCUxgBF63htYPl_f6uy1jna5w-zKIspJZ7r5Q6-4Y");'></div>
+<div class="flex flex-col">
+<h1 class="text-white text-base font-bold leading-normal">Vinland Vision</h1>
+<p class="text-slate-300 text-sm font-normal leading-normal">CMS Dashboard</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-3 py-2 rounded hover:bg-slate-800 transition-colors" href="./dashboard.html">
+<span class="material-symbols-outlined text-slate-300">dashboard</span>
+<p class="text-sm">Dashboard</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-sky-500/20 text-sky-500" href="#">
+<span class="material-symbols-outlined">domain</span>
+<p class="text-sm font-bold">Manage Projects</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded hover:bg-slate-800 transition-colors" href="./manage-services.html">
+<span class="material-symbols-outlined text-slate-300">construction</span>
+<p class="text-sm">Manage Services</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded hover:bg-slate-800 transition-colors" href="./testimonials.html">
+<span class="material-symbols-outlined text-slate-300">star</span>
+<p class="text-sm">Manage Testimonials</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined text-slate-300">settings</span>
+<p class="text-sm">Settings</p>
+</a>
+</nav>
+</div>
+<div class="mt-auto">
+<a class="flex items-center gap-3 px-3 py-2 rounded hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined text-slate-300">logout</span>
+<p class="text-sm">Logout</p>
+</a>
+</div>
+</aside>
+<main class="flex-1 ml-64 p-8">
+<div class="flex flex-col gap-8 max-w-7xl mx-auto">
+<header class="flex flex-wrap justify-between items-center gap-4">
+<h1 class="text-slate-800 text-4xl font-black leading-tight tracking-[-0.03em]">Manage Projects</h1>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-10 px-4 bg-sky-500 text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-sky-600 transition-colors shadow-sm">
+<span class="material-symbols-outlined text-base">add_circle</span>
+<span class="truncate">Add Project</span>
+</button>
+</header>
+<div class="flex flex-wrap items-center justify-between gap-4">
+<div class="flex items-center gap-4">
+<div class="relative">
+<select class="appearance-none w-48 bg-white border border-slate-300 rounded-lg py-2 pl-3 pr-10 text-slate-500 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-sky-500 text-sm">
+<option>Filter by Category</option>
+<option>Residential</option>
+<option>Commercial</option>
+<option>Renovation</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none">expand_more</span>
+</div>
+<div class="relative">
+<select class="appearance-none w-48 bg-white border border-slate-300 rounded-lg py-2 pl-3 pr-10 text-slate-500 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-sky-500 text-sm">
+<option>Filter by Status</option>
+<option>In Progress</option>
+<option>Completed</option>
+<option>On Hold</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none">expand_more</span>
+</div>
+</div>
+<div class="relative w-full sm:w-64">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+<input class="w-full bg-white border border-slate-300 rounded-lg py-2 pl-10 pr-4 text-slate-800 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-sky-500 text-sm" placeholder="Search projects..." type="text"/>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+<div class="group relative flex flex-col bg-white rounded-xl shadow-sm overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+<div class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover" data-alt="Modern residence with large windows and a wooden facade" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBGDL5KA6JA6K3sjI1xCSd1OR2Ay_to3XHSHesqt3LRuM6mCQatWjMnkB-M2K_rZwNE4W5gC1VGhWyx6OwuknxO7dArP-oI1WDASQ_aQeUrRvmBHGRtEPFeaUulgw6ly6Q6OT8O7X2Cc-oQbPx49b1hHQIwzin4iFhVjPZLxOZzI_ryGHtpS9-VdHtaQvVbfHNj9IvkTCm571Rmsdq-pKN1b2sccwr4iXOI9WgMMsKrz6gI3t0kSrFu8MAKT6JI2qAwPcBniR8wZnw");'></div>
+<div class="p-4 flex flex-col flex-grow">
+<p class="text-slate-800 text-base font-bold leading-normal">Nordic Residence</p>
+<p class="text-slate-500 text-sm font-normal leading-normal">Residential</p>
+</div>
+<div class="absolute top-3 right-3 flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<button class="flex items-center justify-center size-8 rounded-full bg-white/80 backdrop-blur-sm text-slate-600 hover:bg-white hover:text-sky-500 transition-colors">
+<span class="material-symbols-outlined text-lg">edit</span>
+</button>
+<button class="flex items-center justify-center size-8 rounded-full bg-white/80 backdrop-blur-sm text-slate-600 hover:bg-white hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined text-lg">delete</span>
+</button>
+</div>
+</div>
+<div class="group relative flex flex-col bg-white rounded-xl shadow-sm overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+<div class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover" data-alt="A multi-story commercial building with glass panels" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBphfKCOqwGbmhFHi6_zYOHjD0S8QJ2RoOL5VzPh335c9PX72V-a3BZH-1rms1ZUx4g1e0E4zeuhEEmaZ0Gg2LIHKqNFt-bi1U7cUSNW2Mo5d_iA4pCVk_fRniwVznx4FCfMtngGeGwFy-m9dPMVVw1xTA1QtDg-YR2mZvULH08Ipx_5563dM_yvY1xWsP93FzmrjbwpdcmO3nn6jbWypMEJeAn4UFCCJRHpWJgOox3S4T2qxr2Q1SqFj4PKgl4jCmp4Y00cS5qS3s");'></div>
+<div class="p-4 flex flex-col flex-grow">
+<p class="text-slate-800 text-base font-bold leading-normal">Coastal Commercial Hub</p>
+<p class="text-slate-500 text-sm font-normal leading-normal">Commercial</p>
+</div>
+<div class="absolute top-3 right-3 flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<button class="flex items-center justify-center size-8 rounded-full bg-white/80 backdrop-blur-sm text-slate-600 hover:bg-white hover:text-sky-500 transition-colors">
+<span class="material-symbols-outlined text-lg">edit</span>
+</button>
+<button class="flex items-center justify-center size-8 rounded-full bg-white/80 backdrop-blur-sm text-slate-600 hover:bg-white hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined text-lg">delete</span>
+</button>
+</div>
+</div>
+<div class="group relative flex flex-col bg-white rounded-xl shadow-sm overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+<div class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover" data-alt="Interior of a modern urban loft with exposed brick" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCYmADd86Z55C11zwNrjbPMntfQNnfC-no_F53DHNrKqQVr3Ard1A6g4-aDhtUjmYAPStPmfzdMML9FlMkfpcKHLZehLbpzj0ZOdKmuyRMvOgZGcgLauqEwaORZ9iy5sLCSxnnzIVHRg5ert_9aebKRL0XdyULyCKayhp-6Bq33kDPc-VCeMf4xhI8xcA9I1-u4FI1_bsBZ5R8lUQTeloz-aERAK6_YCw78sihr_3-iP86JX66etLN5oquYdEE5UmO4lZcsNHHYbcI");'></div>
+<div class="p-4 flex flex-col flex-grow">
+<p class="text-slate-800 text-base font-bold leading-normal">Modern Urban Loft</p>
+<p class="text-slate-500 text-sm font-normal leading-normal">Renovation</p>
+</div>
+<div class="absolute top-3 right-3 flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<button class="flex items-center justify-center size-8 rounded-full bg-white/80 backdrop-blur-sm text-slate-600 hover:bg-white hover:text-sky-500 transition-colors">
+<span class="material-symbols-outlined text-lg">edit</span>
+</button>
+<button class="flex items-center justify-center size-8 rounded-full bg-white/80 backdrop-blur-sm text-slate-600 hover:bg-white hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined text-lg">delete</span>
+</button>
+</div>
+</div>
+<div class="group relative flex flex-col bg-white rounded-xl shadow-sm overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+<div class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover" data-alt="A two-story suburban family home with a green lawn" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAX6a4nzf5qYUFT5fu4iw6bVTbzJECV7VbS98xkUTuv64GFSTq-1s36bv-pgNz5uQaNo06ZS7r4T0YPtFZ16D5PZUKMsMZ3RXCwEGCw2zLp6dBfVJGUZ53cL7UaB8dx3c1QCMsP8YFpsed_-pAriWVl1OAuwa-bSr50mUzemCLstOvc8RI-fLgLssSZCiTMVacI9wJeqx2VGSt_JkiBV67IytcjibE9F0SgDbXpot9ZM3ZKLvpTLowyciOg1bBGIBvcAEh-ZO9vtfk");'></div>
+<div class="p-4 flex flex-col flex-grow">
+<p class="text-slate-800 text-base font-bold leading-normal">Suburban Family Home</p>
+<p class="text-slate-500 text-sm font-normal leading-normal">Residential</p>
+</div>
+<div class="absolute top-3 right-3 flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<button class="flex items-center justify-center size-8 rounded-full bg-white/80 backdrop-blur-sm text-slate-600 hover:bg-white hover:text-sky-500 transition-colors">
+<span class="material-symbols-outlined text-lg">edit</span>
+</button>
+<button class="flex items-center justify-center size-8 rounded-full bg-white/80 backdrop-blur-sm text-slate-600 hover:bg-white hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined text-lg">delete</span>
+</button>
+</div>
+</div>
+<div class="group relative flex flex-col bg-white rounded-xl shadow-sm overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+<div class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover" data-alt="A tall skyscraper in a downtown city area" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB-2RrDctI_bBNrFNAI_uJiGhO49O5Zpr2eyC0eymZxhsfyEkQBNk_wydHlH3WXplkqA_CMK-jwx4p0wVFmsKL7xPQoKkdRWBOuoAxLn3w-WgU4Bxc5kXaOZvX2U9wV4F8rLhs-QnJ4i4oltMesrYJuU06z8Ebt5385e4yQvYmJxH2lqCza35QuvNvk_AnojYSFG-u1tdRsWNyZDvn_99iaE19bT6kvR5InoOQbNJd4o7jkDJFpyf1SGjaUD2ftugOhD8xF6L_2No0");'></div>
+<div class="p-4 flex flex-col flex-grow">
+<p class="text-slate-800 text-base font-bold leading-normal">Downtown Office Tower</p>
+<p class="text-slate-500 text-sm font-normal leading-normal">Commercial</p>
+</div>
+<div class="absolute top-3 right-3 flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<button class="flex items-center justify-center size-8 rounded-full bg-white/80 backdrop-blur-sm text-slate-600 hover:bg-white hover:text-sky-500 transition-colors">
+<span class="material-symbols-outlined text-lg">edit</span>
+</button>
+<button class="flex items-center justify-center size-8 rounded-full bg-white/80 backdrop-blur-sm text-slate-600 hover:bg-white hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined text-lg">delete</span>
+</button>
+</div>
+</div>
+<div class="group relative flex flex-col bg-white rounded-xl shadow-sm overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+<div class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover" data-alt="An eco-friendly villa surrounded by lush greenery" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCXa_z0L1815SaIF_skJ2e_smk88xIF1kwNIUn1dqUSj322wEZQ8XugDF0oxWKWH0W3vrtzbcfQIS0jkpBN07sYAfDrICaJiKuaGKCrgbC-0UXsLIGHkIsl6uwh31MV8EANcgFsu9ZqaIxF4ZihZUy3D5yqeYFcqvfIjZrh9lp08uFEWcQE4gWbkPjlvp6vD4gCHDoVSXmdmz6SBhA_PHjko3AAfCZi9GzzhzPoPDQUANHHYFHsk7QYz0qqkVB_qctgc1Uo9Rd6dWM");'></div>
+<div class="p-4 flex flex-col flex-grow">
+<p class="text-slate-800 text-base font-bold leading-normal">Eco-Friendly Villa</p>
+<p class="text-slate-500 text-sm font-normal leading-normal">Residential</p>
+</div>
+<div class="absolute top-3 right-3 flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<button class="flex items-center justify-center size-8 rounded-full bg-white/80 backdrop-blur-sm text-slate-600 hover:bg-white hover:text-sky-500 transition-colors">
+<span class="material-symbols-outlined text-lg">edit</span>
+</button>
+<button class="flex items-center justify-center size-8 rounded-full bg-white/80 backdrop-blur-sm text-slate-600 hover:bg-white hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined text-lg">delete</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>
