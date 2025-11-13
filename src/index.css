@@ -60,3 +60,35 @@
 .page-transition {
 	transition: background-color 0.4s ease, color 0.4s ease;
 }
+
+@layer utilities {
+	@keyframes fadeInScale {
+		0% {
+			opacity: 0;
+			transform: scale(0.95);
+		}
+		100% {
+			opacity: 1;
+			transform: scale(1);
+		}
+	}
+
+	@keyframes fadeOutScale {
+		0% {
+			opacity: 1;
+			transform: scale(1);
+		}
+		100% {
+			opacity: 0;
+			transform: scale(0.95);
+		}
+	}
+
+	.animate-fadeInScale {
+		animation: fadeInScale 0.25s ease-out forwards;
+	}
+
+	.animate-fadeOutScale {
+		animation: fadeOutScale 0.25s ease-in forwards;
+	}
+}
