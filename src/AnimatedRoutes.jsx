@@ -1,4 +1,4 @@
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation, Navigate } from 'react-router-dom';
 /* eslint no-unused-vars: "off" */
 import { AnimatePresence, motion } from 'framer-motion';
 
@@ -9,6 +9,7 @@ import Projects from './pages/Projects.jsx';
 import ProjectDetails from './pages/ProjectDetails.jsx';
 import About from './pages/About.jsx';
 import Contact from './pages/Contact.jsx';
+import NotFound from './pages/NotFound.jsx';
 
 // Admin pages
 import DashboardPage from './admin/Dashboard.jsx';
@@ -150,6 +151,11 @@ const AnimatedRoutes = () => {
 						</AdminLayout>
 					}
 				/>
+
+				<Route path='/not-found' element={<NotFound />} />
+
+				<Route path='*' element={<Navigate to='/not-found' replace />} />
+
 				{/* Add more admin pages under /admin/... */}
 			</Routes>
 		</AnimatePresence>

@@ -8,12 +8,15 @@ function AppWrapper() {
 
 	// Only show header/footer for non-admin routes
 	const isAdminRoute = location.pathname.startsWith('/admin');
+	const isNotFoundRoute = location.pathname === '/not-found';
+
+	const hideLayout = isAdminRoute || isNotFoundRoute;
 
 	return (
 		<>
-			{!isAdminRoute && <Header />}
+			{!hideLayout && <Header />}
 			<AnimatedRoutes />
-			{!isAdminRoute && <Footer />}
+			{!hideLayout && <Footer />}
 		</>
 	);
 }
