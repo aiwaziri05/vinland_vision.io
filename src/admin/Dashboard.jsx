@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import ReusableButton from './components/ui/Button.jsx';
 
 // Reusable Stats Card component
 const StatsCard = ({ title, value, icon, color }) => (
@@ -28,26 +29,14 @@ const DashboardPage = () => {
 					<h1 className='text-3xl font-bold text-gray-800'>Welcome back, Admin 👋</h1>
 					<p className='text-gray-500'>Here’s an overview of your website’s performance and content.</p>
 				</div>
-				<Link to='/' className='inline-flex items-center gap-2 h-11 px-5 bg-green-50 text-green-700 border border-green-200 rounded-lg font-medium hover:bg-green-100 transition-colors'>
-					<span className='material-symbols-outlined text-[20px]'>arrow_outward</span>
-					View Website
-				</Link>
+				<ReusableButton label='View Website' to='/' icon={() => <span className='material-symbols-outlined text-[20px]'>arrow_outward</span>} variant='green' />
 			</div>
 
 			{/* Quick Actions */}
 			<div className='flex flex-col sm:flex-row gap-3'>
-				<Link
-					to='/admin/manage-projects'
-					className='flex items-center justify-center gap-2 h-11 px-5 bg-primary text-white rounded-lg text-sm font-medium shadow-sm hover:bg-primary/90 transition-colors'>
-					<span className='material-symbols-outlined text-[20px]'>add</span>
-					Add New Project
-				</Link>
-				<Link
-					to='/admin/manage-services'
-					className='flex items-center justify-center gap-2 h-11 px-5 bg-gray-100 text-gray-800 rounded-lg text-sm font-medium shadow-sm hover:bg-gray-200 transition-colors'>
-					<span className='material-symbols-outlined text-[20px]'>add</span>
-					Add New Service
-				</Link>
+				<ReusableButton label='Go to Projects' to='/admin/manage-projects' icon={() => <span className='material-symbols-outlined text-[20px]'>foundation</span>} variant='primary' />
+
+				<ReusableButton label='Go to Services' to='/admin/manage-services' icon={() => <span className='material-symbols-outlined text-[20px]'>construction</span>} variant='secondary' />
 			</div>
 
 			{/* Stats Grid */}
